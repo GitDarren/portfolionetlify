@@ -27,7 +27,6 @@ blanditiis saepe doloremque sequi.
 * Book Title
 * Another Comment
 
-
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit quia
 vitae deleniti accusantium quo earum perferendis fuga doloremque
 eveniet officiis sed, nobis esse, at totam accusamus modi tempora! A
