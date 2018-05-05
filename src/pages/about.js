@@ -10,7 +10,10 @@ export default class about extends Component {
           vitae deleniti accusantium quo earum perferendis fuga doloremque
           eveniet officiis sed, nobis esse, at totam accusamus modi tempora! A
           error alias minus qui asperiores magni ratione cum libero, consequatur
-          sint.
+          sint. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto
+          totam enim minima unde tenetur! Recusandae magni, perferendis expedita
+          aspernatur, quis error impedit corporis labore amet, nostrum
+          blanditiis saepe doloremque sequi.
         </p>
       </div>
     )
