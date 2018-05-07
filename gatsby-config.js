@@ -3,6 +3,7 @@ module.exports = {
     title: 'Darren Smith Portfolio',
     desc: 'A new website and blog for Darren Smith, full stack developer',
   },
+  pathPrefix: '/portfolio',
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
