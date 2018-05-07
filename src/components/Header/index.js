@@ -21,10 +21,30 @@ const HeaderWrapper = styled.div`
 const HeaderContainer = styled.div`
   margin: 0 auto;
   max-width: 960px;
-  height: ${({ isHome }) => (isHome ? '40vh' : '20vh')}
+  height: ${({ isHome }) => (isHome ? '20vh' : '70vh')}
   padding: 1.45rem 1.0875rem;
   position: relative;
   z-index: 2;
+  display: flex;
+  justify-content: space-between;
+`
+const MainNav = styled.nav`
+  ul {
+    list-style: none;
+    display: flex;
+    li {
+      margin-left: 10px;
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+      a {
+        text-decoration: none;
+        color: #fff;
+        &:hover {
+          border-bottom: 3px solid white;
+        }
+      }
+    }
+  }
 `
 
 export default class Header extends Component {
@@ -32,14 +52,14 @@ export default class Header extends Component {
     const { location } = this.props
     if (location.pathname !== prevProps.location.pathname) {
       if (this.props.location.pathname === '/') {
-        this.wrapper.animate([{ height: '20vh' }, { height: '40vh' }], {
+        this.wrapper.animate([{ height: '20vh' }, { height: '70vh' }], {
           duration: 300,
           fill: 'forwards',
           easing: 'cubic-bezier(0.86, 0, 0.07, 1)',
           iterations: 1,
         })
       } else {
-        this.wrapper.animate([{ height: '40vh' }, { height: '20vh' }], {
+        this.wrapper.animate([{ height: '70vh' }, { height: '20vh' }], {
           duration: 300,
           fill: 'forwards',
           easing: 'cubic-bezier(0.86, 0, 0.07, 1)',
@@ -68,16 +88,16 @@ export default class Header extends Component {
               <img src={logo} alt="Dar.ren Logo" />
             </Link>
           </h1>
-          <nav>
-            <u>
+          <MainNav>
+            <ul>
               <li>
                 <Link to="/">Home</Link>
               </li>
               <li>
                 <Link to="/about">About</Link>
               </li>
-            </u>
-          </nav>
+            </ul>
+          </MainNav>
         </HeaderContainer>
         <Img
           style={{
@@ -86,6 +106,7 @@ export default class Header extends Component {
             top: 0,
             width: '100%',
             height: '100%',
+            opacity: 0.3,
           }}
           sizes={data.background.sizes}
         />
